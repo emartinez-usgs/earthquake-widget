@@ -13,8 +13,11 @@ module.exports = (function () {
 	return {
 		development: {
 			src: ['src/htdocs/js/main.js'],
-			dest: '.tmp/js/index.js',
+			dest: '.tmp/js/usgs-earthquake-map.js',
 			options: {
+				alias: [
+					'leaflet:node_modules/leaflet/dist/leaflet-src.js'
+				],
 				bundleOptions: {
 					debug: true
 				}

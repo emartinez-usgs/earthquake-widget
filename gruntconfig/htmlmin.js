@@ -8,7 +8,7 @@ module.exports = {
 			removeComments: true
 		},
 		files: {
-			'dist/htdocs/index.html': 'src/htdocs/index.html'
+			'dist/htdocs/usgs-earthquake-map.html': 'src/htdocs/index.html'
 		}
 	}
 };
