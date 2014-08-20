@@ -1,6 +1,6 @@
 module.exports = {
 	css: {
-		files: ['src/htdocs/css/**/*.css', '.tmp/css/**/*.css'],
+		files: ['src/htdocs/css/**/*.css'],
 		tasks: ['autoprefixer:development']
 	},
 	html: {
