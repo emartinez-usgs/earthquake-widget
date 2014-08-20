@@ -7,6 +7,7 @@ module.exports = function (grunt) {
 
 
 	grunt.registerTask('development', [
+		'copy:development',
 		'browserify:development',
 		'compass:development',
 		'autoprefixer:development',
