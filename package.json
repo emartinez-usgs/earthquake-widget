@@ -1,0 +1,42 @@
+{
+  "name": "earthquake-map",
+  "version": "0.0.0",
+  "description": "Allows users to embed an earthquake map on their page",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usgs/earthquake-map.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "usgs",
+    "earthquake",
+    "map"
+  ],
+  "author": "Eric Martinez <emartinez@usgs.gov> (http://earthquake.usgs.gov/)",
+  "license": "Public Domain",
+  "bugs": {
+    "url": "https://github.com/usgs/earthquake-map/issues"
+  },
+  "homepage": "https://github.com/usgs/earthquake-map",
+  "devDependencies": {
+    "glob": "~4.0.5",
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "~1.0.0",
+    "grunt-browserify": "~2.1.4",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-compass": "~0.9.1",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-copy": "~0.5.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-htmlmin": "~0.3.0",
+    "grunt-contrib-jasmine": "~0.7.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-uglify": "~0.5.1",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-html": "~1.4.0",
+    "leaflet": "^0.7.3",
+    "matchdep": "~0.3.0"
+  }
+}
