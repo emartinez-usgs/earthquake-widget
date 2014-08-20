@@ -21,7 +21,6 @@ following steps:
 3. Install and build the project to obtain distributable code
    - ```cd earthquake-widget```
    - ```npm install```
-   - ```grunt production```
 
 You can preview the built code on your local system with
 ```grunt preview:production```, or you can simply copy the

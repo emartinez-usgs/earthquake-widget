@@ -1,13 +1,14 @@
 {
-  "name": "earthquake-map",
+  "name": "earthquake-widget",
   "version": "0.0.0",
   "description": "Allows users to embed an earthquake map on their page",
   "repository": {
     "type": "git",
-    "url": "https://github.com/usgs/earthquake-map.git"
+    "url": "https://github.com/usgs/earthquake-widget.git"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "grunt production"
   },
   "keywords": [
     "usgs",
@@ -17,9 +18,9 @@
   "author": "Eric Martinez <emartinez@usgs.gov> (http://earthquake.usgs.gov/)",
   "license": "Public Domain",
   "bugs": {
-    "url": "https://github.com/usgs/earthquake-map/issues"
+    "url": "https://github.com/usgs/earthquake-widget/issues"
   },
-  "homepage": "https://github.com/usgs/earthquake-map",
+  "homepage": "https://github.com/usgs/earthquake-widget",
   "devDependencies": {
     "glob": "~4.0.5",
     "grunt": "~0.4.5",
