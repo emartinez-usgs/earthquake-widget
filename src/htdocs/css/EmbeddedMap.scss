@@ -1,0 +1,20 @@
+.usgs-earthquake-map-widget {
+	display:block;
+	width:100%;
+	height:100%;
+	min-height:500px;
+}
+
+.usgs-earthquake-event-summary {
+	> strong, > em, > a {
+		display:block;
+		line-height:1;
+	}
+	> strong {
+		font-size:1.2em;
+	}
+	> em {
+		font-size:.9em;
+		margin-bottom:8px;
+	}
+}

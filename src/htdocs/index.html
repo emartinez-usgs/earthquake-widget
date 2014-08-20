@@ -2,17 +2,94 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8"/>
-	<title>Application Title</title>
+	<title>Embedded Maps</title>
 	<meta name="description" content="Application description"/>
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1.5"/>
 
 	<!-- Stylesheets go here -->
-	<link rel="stylesheet" href="css/index.css"/>
+	<style>
+	* {
+		box-sizing: border-box;
+	}
+
+	html, body {
+		display: block;
+		margin: 0;
+		padding: 0;
+	}
+
+	body {
+		margin: 16px;
+	}
+
+	.widget {
+		margin-top: 16px;
+	}
+	.widget > .header, .widget > .usgs-earthquake-map-widget {
+		border-style: solid;
+		border-color: #333;
+	}
+	.widget > .header {
+		background-color: #EEE;
+		margin: 0;
+		padding: 8px;
+		border-width: 1px;
+	}
+	.widget > .usgs-earthquake-map-widget {
+		border-width: 0 1px 1px 1px;
+	}
+
+	@media screen and (min-width: 768px) {
+		body {
+			margin-right: 0;
+		}
+
+		.widget {
+			float: left;
+			width: 50%;
+			padding-right: 16px;
+		}
+	}
+	</style>
+	<link rel="stylesheet" href="css/usgs-earthquake-map.css"/>
 </head>
 <body>
-	<h1>Application Title</h1>
+	<h1>Embedded Maps</h1>
+
+	<div class="widget">
+		<h4 class="header">All Earthquakes, Past Hour</h4>
+		<a
+				href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_hour.atom"
+				class="usgs-earthquake-map">
+			View Raw Data
+		</a>
+	</div>
+	<div class="widget">
+		<h4 class="header">M2.5+ Earthquakes, Past Day</h4>
+		<a
+				href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.atom"
+				class="usgs-earthquake-map">
+			View Raw Data
+		</a>
+	</div>
+	<div class="widget">
+		<h4 class="header">M4.5+ Earthquakes, Past Week</h4>
+		<a
+				href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.atom"
+				class="usgs-earthquake-map">
+			View Raw Data
+		</a>
+	</div>
+	<div class="widget">
+		<h4 class="header">Significant Earthquakes, Past Month</h4>
+		<a
+				href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/significant_month.atom"
+				class="usgs-earthquake-map">
+			View Raw Data
+		</a>
+	</div>
 
 	<!-- Javascripts go here -->
-	<script src="js/index.js"></script>
+	<script src="js/usgs-earthquake-map.js"></script>
 </body>
 </html>
