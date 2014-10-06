@@ -3,10 +3,8 @@
 var EmbeddedMap = require('./EmbeddedMap.js'),
     targets = document.querySelectorAll('.usgs-earthquake-map'),
     numTargets = targets.length,
-    targetIter = 0,
-    target = null;
+    targetIter = 0;
 
 for (; targetIter < numTargets; targetIter++) {
-	target = targets.item(targetIter);
-	new EmbeddedMap(target);
+	new EmbeddedMap(targets.item(targetIter));
 }
