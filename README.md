@@ -137,9 +137,9 @@ var styleByDepth = function (feature) {
 <a ... data-options="{'featureStyle': 'styleByDepth'}">...</a>
 ```
 
-See the (Leaflet Documentation)[http://leafletjs.com/reference.html#path] for
+See the [Leaflet Documentation](http://leafletjs.com/reference.html#path) for
 more information about available styling options.
 
-More documentation about feature properties can be found on the (U.S.
-Geological Survey Earthquake Website)
-[http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php]
+More documentation about feature properties can be found on the [U.S.
+Geological Survey Earthquake Website]
+(http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
