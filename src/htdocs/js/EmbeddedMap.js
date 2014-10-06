@@ -26,8 +26,7 @@ var DEFAULT_FEED_URL = 'http://earthquake.usgs.gov/earthquakes/feed/v1.0/' +
 		'summary/all_hour.geojsonp';
 
 var EmbeddedMap = module.exports = function (target) {
-
-	var options = DEFAULTS,
+	var options = Object.create(DEFAULTS),
 	    feedUrl = null,
 	    targetOpts = null,
 	    key = null;
@@ -54,22 +53,25 @@ var EmbeddedMap = module.exports = function (target) {
 	}
 
 	// Set a filter function
-	if (options.featureFilter && typeof window.featureFilter === 'function') {
-		options.featureFilter = window.featureFilter;
+	if (options.featureFilter &&
+			typeof window[options.featureFilter] === 'function') {
+		options.featureFilter = window[options.featureFilter];
 	} else {
 		options.featureFilter = this._featureFilter;
 	}
 
 	// Set a style function
-	if (options.featureStyle && typeof window.featureStyle === 'function') {
-		options.featureStyle = window.featureStyle;
+	if (options.featureStyle &&
+			typeof window[options.featureStyle] === 'function') {
+		options.featureStyle = window[options.featureStyle];
 	} else {
 		options.featureStyle = this._featureStyle;
 	}
 
 	// Set an info function
-	if (options.featureFormat && typeof window.featureFormat === 'function') {
-		options.featureFormat = window.featureFormat;
+	if (options.featureFormat &&
+			typeof window[options.featureFormat] === 'function') {
+		options.featureFormat = window[options.featureFormat];
 	} else {
 		options.featureFormat = this._featureFormat;
 	}
@@ -122,11 +124,19 @@ EmbeddedMap.prototype.render = function (data) {
 };
 
 EmbeddedMap.prototype._initializeMap = function () {
-	var options = this._options,
+	var _this = this,
+	    options = this._options,
 	    baseLayer = L.tileLayer(options.baseLayer.url, options.baseLayer),
 	    map;
 
 	this._map = map = L.map(this._el, options.map);
+
+	if (this._options.bounds) {
+		this._map.once('load', function () {
+			_this._map.fitBounds(options.bounds);
+		});
+	}
+
 	map.addLayer(baseLayer);
 };
 
