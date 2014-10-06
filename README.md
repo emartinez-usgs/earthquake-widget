@@ -142,4 +142,4 @@ more information about available styling options.
 
 More documentation about feature properties can be found on the [U.S.
 Geological Survey Earthquake Website]
-(http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php)
+(http://earthquake.usgs.gov/earthquakes/feed/v1.0/geojson.php).
