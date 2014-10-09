@@ -85,6 +85,17 @@ use the given bounds.
 Min/max lat/lng are (as expected), the minimum and maximum latitude and
 longitude (respectively) of the desired map extent.
 
+### static (Boolean)
+Specifying this option allows you to make the map mostly non-interactive. Users
+are not be able to zoom/pan the map. Users may still click on a particular
+event on the map for more information, however the map will not adjust to
+accommodate the popup so some parts of the popup may be obscured when the event
+occurs at or near the edge of the map.
+
+```html
+<a ... data-options="{'static': true}">...</a>
+```
+
 ### featureFilter (String)
 Specifying this option allows you to choose which features will be plotted. The
 value for this option should be the name of a function (defined elsewhere) that
