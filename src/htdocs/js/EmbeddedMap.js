@@ -112,7 +112,7 @@ EmbeddedMap.prototype.render = function (data) {
 					_this._featureFormat(feature);
 
 			if (markup) {
-				layer.bindPopup(markup);
+				layer.bindPopup(markup, {autoPan: !options.static});
 			}
 		},
 
@@ -129,7 +129,20 @@ EmbeddedMap.prototype._initializeMap = function () {
 	    baseLayer = L.tileLayer(options.baseLayer.url, options.baseLayer),
 	    map;
 
-	this._map = map = L.map(this._el, options.map);
+	if (options.hasOwnProperty('static') && options.static) {
+		this._map = map = L.map(this._el, {
+			dragging: false,
+			touchZoom: false,
+			scrollWheelZoom: false,
+			doubleClickZoom: false,
+			boxZoom: false,
+			tap: false,
+			keyboard: false,
+			zoomControl: false
+		});
+	} else {
+		this._map = map = L.map(this._el, options.map);
+	}
 
 	if (this._options.bounds) {
 		this._map.once('load', function () {
